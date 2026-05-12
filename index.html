@@ -1,89 +1,368 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            MLAI LLC - End-user-focused, local-first, privacy-focused AI
+            experiences
+        </title>
+        <meta
+            name="description"
+            content="Personalized, local-first, privacy-focused AI experiences for individual end users. Maker of Maibook, Claude Code CLI Viewer, Haixu and ahai."
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <nav>
+            <div class="container">
+                <a href="/" class="nav-brand">MLAI LLC</a>
+                <div class="nav-links">
+                    <a href="/" class="active">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="tech.html">Technical</a>
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+        </nav>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="haixu logo icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <title>MLAI LLC</title>
-    <style>
-        .app-tile {
-            display: inline-block;
-            width: 200px;
-            margin: 10px;
-            vertical-align: top;
-        }
+        <header class="hero">
+            <div class="container">
+                <div class="hero-eyebrow">MLAI LLC</div>
+                <h1>
+                    End-user-focused, local-first, privacy-focused, personalized
+                    AI experiences.
+                </h1>
+                <p class="hero-desc">
+                    Privacy-focused AI experiences for individual end users.
+                    Local-first, hosted only when needed. From personalized
+                    agents to educational comics to developer tools.
+                </p>
+                <div class="hero-actions">
+                    <a
+                        href="https://maibook.app"
+                        class="btn-primary btn"
+                        target="_blank"
+                        >Try Maibook</a
+                    >
+                    <a href="products.html" class="btn">Products &rarr;</a>
+                </div>
+            </div>
+        </header>
 
-        .app-tile img {
-            width: 100%;
-            height: auto;
-        }
+        <!-- FLAGSHIP: MAIBOOK -->
+        <section>
+            <div class="container">
+                <div class="featured-banner">
+                    <span class="featured-badge"
+                        >New &middot; Free for a limited time</span
+                    >
+                    <h2>Maibook - your third brain.</h2>
+                    <p style="color: var(--text-dim)">
+                        Maibook is a local, private community of AI members
+                        personalized based on your interests, discussing things
+                        you care about. Free for a limited time.
+                    </p>
+                    <ul
+                        style="
+                            margin: 1.25rem 0 1.5rem 1.5rem;
+                            color: var(--text-dim);
+                        "
+                    >
+                        <li>
+                            Personalized AI agents that respond to your every
+                            request
+                        </li>
+                        <li>
+                            Works behind the scenes so you can focus on your
+                            priorities
+                        </li>
+                        <li>
+                            Local-first desktop app for Mac and Windows running
+                            local AI models
+                        </li>
+                    </ul>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap">
+                        <a
+                            href="https://maibook.app"
+                            class="btn-primary btn"
+                            target="_blank"
+                            >maibook.app</a
+                        >
+                        <a
+                            href="https://rcanand.gumroad.com/l/cremjz"
+                            class="btn"
+                            target="_blank"
+                            >Get Maibook &rarr;</a
+                        >
+                        <a
+                            href="https://maibook.app/docs.html"
+                            class="btn"
+                            target="_blank"
+                            >Docs</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        .icon img {
-            display: block;
-            width: 3rem;
-            height: 3rem;
-            margin: 0 auto;
-        }
+        <!-- HOW WE BUILD -->
+        <section>
+            <div class="container">
+                <div class="sec-header">
+                    <span class="sec-tag">How we build</span>
+                    <h2>Core principles</h2>
+                    <div class="sec-line"></div>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" style="cursor: default">
+                        <div class="product-icon">&#x1F464;</div>
+                        <h3>Personalized &middot; end-user focused</h3>
+                        <p>
+                            Focus on the end user - whether at work, at home, or
+                            as a parent.
+                        </p>
+                    </div>
+                    <div class="product-card" style="cursor: default">
+                        <div class="product-icon">&#x1F4BB;</div>
+                        <h3>Local-first AI</h3>
+                        <p>
+                            On-device inference where it works (Apple MLX,
+                            Ollama, local LLMs); hosted models when the task
+                            demands it. Your data stays on your machine by
+                            default.
+                        </p>
+                    </div>
+                    <div class="product-card" style="cursor: default">
+                        <div class="product-icon">&#x1F512;</div>
+                        <h3>Privacy by default</h3>
+                        <p>
+                            No ad telemetry. No accounts that extract you. Tools
+                            that respect that you own your data and your
+                            attention.
+                        </p>
+                    </div>
+                    <div class="product-card" style="cursor: default">
+                        <div class="product-icon">&#x26A1;</div>
+                        <h3>Often early</h3>
+                        <p>
+                            Twenty years of independently arriving at ideas
+                            before they became mainstream - no-code, visual
+                            knowledge graphs, multi-LLM councils, AI second
+                            brains.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        .app-row {
-            display: flex;
-            overflow-x: auto;
-            gap: 10px;
-            padding: 10px;
-        }
-
-        /* Style for scrollbar */
-        .app-row::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        .app-row::-webkit-scrollbar-thumb {
-            background-color: #888;
-            border-radius: 10px;
-        }
-
-        .app-row::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-    </style>
-</head>
-
-<body>
-    <nav class="container-fluid">
-        <ul>
-            <li><strong>MLAI</strong> LLC</li>
-        </ul>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="https://rcanand.hashnode.dev" target="_blank">Blog</a></li>
-            <li><a href="mailto:admin@mlaillc.com">Contact</a></li>
-        </ul>
-    </nav>
-    <main class="container">
-        <h1>haixu - Human AI collaboration to create educational comics</h1>
-        <a href="https://rcanand.gumroad.com"><img src="haixu_banner.png" alt="haixu banner"></img></a>
-    </main>
-    <!-- <section aria-label="Subscribe example">
+        <!-- STATS -->
         <div class="container">
-            <article>
-                <hgroup>
-                    <h2>Stay Updated</h2>
-                    <h3>Subscribe for Latest App News</h3>
-                </hgroup>
-                <form class="grid">
-                    <input type="text" id="firstname" name="firstname" placeholder="Your Name" aria-label="Name"
-                        required />
-                    <input type="email" id="email" name="email" placeholder="Your Email" aria-label="Email" required />
-                    <button type="submit" onclick="event.preventDefault()">Subscribe</button>
-                </form>
-            </article>
+            <div class="stats-row">
+                <div class="stat-cell">
+                    <div class="stat-val">68</div>
+                    <div class="stat-lbl">Comics Published</div>
+                </div>
+                <div class="stat-cell">
+                    <div class="stat-val">9</div>
+                    <div class="stat-lbl">Kindle Books</div>
+                </div>
+                <div class="stat-cell">
+                    <div class="stat-val">5</div>
+                    <div class="stat-lbl">Active Products</div>
+                </div>
+                <div class="stat-cell">
+                    <div class="stat-val">36</div>
+                    <div class="stat-lbl">Gumroad Items</div>
+                </div>
+                <div class="stat-cell">
+                    <div class="stat-val">20+</div>
+                    <div class="stat-lbl">Years Building</div>
+                </div>
+            </div>
         </div>
-    </section> -->
-    <footer class="container">
-        © MLAI LLC
-    </footer>
-</body>
 
+        <!-- PRODUCTS PREVIEW -->
+        <section>
+            <div class="container">
+                <div class="sec-header">
+                    <span class="sec-tag">Products</span>
+                    <h2>What We Build</h2>
+                    <div class="sec-line"></div>
+                </div>
+                <div class="product-grid">
+                    <a
+                        href="https://maibook.app"
+                        class="product-card"
+                        target="_blank"
+                    >
+                        <div class="product-icon">&#x1F9E0;</div>
+                        <h3>Maibook</h3>
+                        <p>
+                            Your third brain. A private community of
+                            personalized AI agents expanding on your every
+                            activity. Local-first desktop app for Mac and
+                            Windows.
+                        </p>
+                        <div class="product-meta">
+                            <span>macOS</span><span>Windows</span
+                            ><span>Local-first</span>
+                        </div>
+                    </a>
+                    <a
+                        href="https://rcanand.gumroad.com/l/ccviewer"
+                        class="product-card"
+                        target="_blank"
+                    >
+                        <div class="product-icon">&#x1F4BB;</div>
+                        <h3>Claude Code CLI Viewer</h3>
+                        <p>
+                            Dark-mode viewer for Claude Code CLI sessions.
+                            Browse, search, and visualize AI coding sessions.
+                        </p>
+                        <div class="product-meta">
+                            <span>Web</span><span>$1+</span>
+                        </div>
+                    </a>
+                    <a href="products.html#haixu" class="product-card">
+                        <div class="product-icon">&#x1F4DA;</div>
+                        <h3>Haixu Visual Guides</h3>
+                        <p>
+                            AI-powered educational comics spanning science,
+                            history, culture, technology. 68+ published on
+                            Gumroad, 9 books on Amazon Kindle.
+                        </p>
+                        <div class="product-meta">
+                            <span>68 comics</span><span>9 Kindle books</span>
+                        </div>
+                    </a>
+                    <a
+                        href="https://ahai.app"
+                        class="product-card"
+                        target="_blank"
+                    >
+                        <div class="product-icon">&#x1F50D;</div>
+                        <h3>ahai</h3>
+                        <p>
+                            Local AI idea discovery for Mac. Scans markdown
+                            files to surface forgotten ideas. 100% private,
+                            Apple Silicon optimized.
+                        </p>
+                        <div class="product-meta">
+                            <span>macOS</span><span>MLX</span><span>$5+</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- LATEST FROM BLOG -->
+        <section>
+            <div class="container">
+                <div class="sec-header">
+                    <span class="sec-tag">Technical</span>
+                    <h2>Latest Insights</h2>
+                    <div class="sec-line"></div>
+                </div>
+                <ul class="article-list">
+                    <li class="article-item">
+                        <div>
+                            <div class="article-title">
+                                <a
+                                    href="https://x.com/rcanand/status/2051780995968536934"
+                                    target="_blank"
+                                    >How to use AI effectively - the missing
+                                    manual</a
+                                >
+                            </div>
+                            <div class="article-desc">
+                                Pick the best model you have, invest in the
+                                first prompt, debug by fixing the prompt and
+                                re-running. A practical guide to getting
+                                senior-level work from any AI assistant.
+                            </div>
+                        </div>
+                        <span class="article-meta">X &middot; May 2026</span>
+                    </li>
+                    <li class="article-item">
+                        <div>
+                            <div class="article-title">
+                                <a
+                                    href="https://x.com/rcanand/status/2015173940969439666"
+                                    target="_blank"
+                                    >The Best Harness Beats the Best Model</a
+                                >
+                            </div>
+                            <div class="article-desc">
+                                The code+prompt layer matters more than the
+                                model in 2026. Small and open models in a good
+                                harness rival frontier models for most tasks.
+                            </div>
+                        </div>
+                        <span class="article-meta">X &middot; Jan 2026</span>
+                    </li>
+                    <li class="article-item">
+                        <div>
+                            <div class="article-title">
+                                <a
+                                    href="https://x.com/rcanand/status/1995704040819413492"
+                                    target="_blank"
+                                    >Building ahai - what, how, why</a
+                                >
+                            </div>
+                            <div class="article-desc">
+                                A transparent decision log for ahai: local-first
+                                MLX, Mac-only, $19+ one-time pricing, no
+                                subscriptions, MLX over Ollama, US-origin
+                                default model, and why the "open-source as bait"
+                                model is morally worse than transparent paid.
+                            </div>
+                        </div>
+                        <span class="article-meta">X &middot; Dec 2025</span>
+                    </li>
+                    <li class="article-item">
+                        <div>
+                            <div class="article-title">
+                                <a
+                                    href="https://x.com/rcanand/status/1995191595919118720"
+                                    target="_blank"
+                                    >My AI coding mindset</a
+                                >
+                            </div>
+                            <div class="article-desc">
+                                A compact manifesto on working with AI
+                                assistants - end-to-end ownership, recursive
+                                task decomposition, tests as immutable
+                                contracts, dual-doc patterns, parallel sessions
+                                designed for diversity.
+                            </div>
+                        </div>
+                        <span class="article-meta">X &middot; Nov 2025</span>
+                    </li>
+                </ul>
+                <a href="tech.html" class="btn" style="margin-top: 1rem"
+                    >All Technical Content &rarr;</a
+                >
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="foot-links">
+                    <a href="https://rcanand.gumroad.com">Gumroad</a>
+                    <a
+                        href="https://www.amazon.com/stores/R.-C.-Anand/author/B0DNY6PYPW"
+                        >Kindle</a
+                    >
+                    <a href="https://rcanand.hashnode.dev/">Blog</a>
+                    <a href="https://github.com/mlaillc">GitHub</a>
+                    <a href="https://x.com/rcanand">X</a>
+                    <a href="https://rcanand.github.io">Founder</a>
+                </div>
+                <p>
+                    MLAI LLC &middot; Bellevue, WA &middot; rcanand@mlaillc.com
+                </p>
+            </div>
+        </footer>
+    </body>
 </html>

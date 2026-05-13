@@ -232,6 +232,24 @@ section { padding: 4rem 0; }
   color: inherit;
 }
 .product-card:hover::before { opacity: 1; }
+
+/* Static info cards: dashed border, transparent fill, no hover motion */
+.product-card--static {
+  background: transparent;
+  border-style: dashed;
+  border-color: var(--border-lt);
+  cursor: default;
+}
+.product-card--static:hover {
+  border-color: var(--border-lt);
+  transform: none;
+  box-shadow: none;
+}
+.product-card--static::before { display: none !important; }
+.product-card--static .product-icon {
+  background: transparent;
+  border-color: var(--border-lt);
+}
 .product-icon {
   width: 42px; height: 42px; border-radius: var(--r-sm);
   background: var(--accent-dim); border: 1px solid var(--accent-med);

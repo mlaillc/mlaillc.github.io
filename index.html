@@ -20,7 +20,7 @@
                 <div class="nav-links">
                     <a href="/" class="active">Home</a>
                     <a href="products.html">Products</a>
-                    <a href="tech.html">Technical</a>
+                    <a href="blog/">Blog</a>
                     <a href="about.html">About</a>
                 </div>
             </div>
@@ -115,7 +115,7 @@
                     <div class="sec-line"></div>
                 </div>
                 <div class="product-grid">
-                    <div class="product-card" style="cursor: default">
+                    <div class="product-card product-card--static">
                         <div class="product-icon">&#x1F464;</div>
                         <h3>Personalized &middot; end-user focused</h3>
                         <p>
@@ -123,7 +123,7 @@
                             as a parent.
                         </p>
                     </div>
-                    <div class="product-card" style="cursor: default">
+                    <div class="product-card product-card--static">
                         <div class="product-icon">&#x1F4BB;</div>
                         <h3>Local-first AI</h3>
                         <p>
@@ -133,7 +133,7 @@
                             default.
                         </p>
                     </div>
-                    <div class="product-card" style="cursor: default">
+                    <div class="product-card product-card--static">
                         <div class="product-icon">&#x1F512;</div>
                         <h3>Privacy by default</h3>
                         <p>
@@ -142,7 +142,7 @@
                             attention.
                         </p>
                     </div>
-                    <div class="product-card" style="cursor: default">
+                    <div class="product-card product-card--static">
                         <div class="product-icon">&#x26A1;</div>
                         <h3>Often early</h3>
                         <p>
@@ -256,6 +256,183 @@
             </div>
         </section>
 
+        <!-- DEEPER INTERESTS -->
+        <section>
+            <div class="container">
+                <div class="sec-header">
+                    <span class="sec-tag">Threads we follow</span>
+                    <h2>Deeper interests in AI / AGI</h2>
+                    <div class="sec-line"></div>
+                </div>
+                <p style="color: var(--text-dim); margin-bottom: 1.5rem; max-width: 720px">
+                    The longer-running research and architecture threads that
+                    inform what we build. Not all of these show up in shipping
+                    products yet - some are bets, some are skepticisms, all are
+                    actively read.
+                </p>
+                <div class="product-grid">
+                    <div class="product-card product-card--static">
+                        <div class="product-icon">&#x1F30D;</div>
+                        <h3>World models</h3>
+                        <p>
+                            Yann LeCun's V-JEPA program and the broader case
+                            that next-token prediction alone won't get us to
+                            general intelligence. Watching whether
+                            self-supervised joint-embedding architectures hold
+                            up.
+                        </p>
+                    </div>
+                    <div class="product-card product-card--static">
+                        <div class="product-icon">&#x1F9E0;</div>
+                        <h3>Thousand Brains</h3>
+                        <p>
+                            Jeff Hawkins and Numenta on cortical columns and
+                            voting-based representation. The most biologically
+                            grounded alternative architecture being actively
+                            developed today.
+                        </p>
+                    </div>
+                    <div class="product-card product-card--static">
+                        <div class="product-icon">&#x1F9EC;</div>
+                        <h3>Computational neuroscience</h3>
+                        <p>
+                            What brains actually do - predictive coding,
+                            free-energy, sparse coding. A useful corrective
+                            against purely scale-driven narratives.
+                        </p>
+                    </div>
+                    <div class="product-card product-card--static">
+                        <div class="product-icon">&#x1F517;</div>
+                        <h3>Neurosymbolic AI</h3>
+                        <p>
+                            The slow comeback of explicit symbolic structure on
+                            top of learned representations. Where reasoning,
+                            tool use, and verifiability meet.
+                        </p>
+                    </div>
+                    <div class="product-card product-card--static">
+                        <div class="product-icon">&#x1F3AF;</div>
+                        <h3>Reinforcement learning, post-RLHF</h3>
+                        <p>
+                            Process rewards, verifier-guided RL, RL on tool
+                            use, RL for long-horizon agentic behavior. The
+                            interesting frontier is no longer just preference
+                            tuning.
+                        </p>
+                    </div>
+                    <div class="product-card product-card--static">
+                        <div class="product-icon">&#x1F4DA;</div>
+                        <h3>The Bitter Lesson, with footnotes</h3>
+                        <p>
+                            Sutton's bitter lesson rules but isn't the whole
+                            story. Where structure still buys you something -
+                            inductive biases for sample efficiency, safety, and
+                            interpretability.
+                        </p>
+                    </div>
+                    <div class="product-card product-card--static">
+                        <div class="product-icon">&#x1F4DD;</div>
+                        <h3>Arxiv abstracts at scale</h3>
+                        <p>
+                            The paper firehose outpaces anyone's ability to
+                            read full papers. Abstract-first reading habits,
+                            with Asta and NotebookLM doing the second-pass
+                            triage. Citation networks beat title scans.
+                        </p>
+                    </div>
+                    <div class="product-card product-card--static">
+                        <div class="product-icon">&#x1F4BB;</div>
+                        <h3>Local-first &amp; on-device</h3>
+                        <p>
+                            MLX on Apple Silicon, Ollama, quantized models. The
+                            local-vs-frontier gap keeps shrinking - and the
+                            privacy + cost story is only getting stronger.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOOLS WE LOVE -->
+        <section>
+            <div class="container">
+                <div class="sec-header">
+                    <span class="sec-tag">Daily drivers</span>
+                    <h2>Tools we love right now</h2>
+                    <div class="sec-line"></div>
+                </div>
+                <p style="color: var(--text-dim); margin-bottom: 1.5rem; max-width: 720px">
+                    The handful we reach for daily this season. Dated, because
+                    this list ages quickly.
+                </p>
+                <div class="product-grid">
+                    <a
+                        href="https://www.anthropic.com/claude"
+                        class="product-card"
+                        target="_blank"
+                    >
+                        <div class="product-icon">&#x2728;</div>
+                        <h3>Claude (Code + apps)</h3>
+                        <p>
+                            Primary thinking partner. Used well beyond coding -
+                            knowledge work, multi-agent orchestration,
+                            Obsidian-vault sweeps.
+                        </p>
+                        <div class="product-meta">
+                            <span>Anthropic</span><span>2026</span>
+                        </div>
+                    </a>
+                    <a
+                        href="https://deepmind.google/technologies/gemini/"
+                        class="product-card"
+                        target="_blank"
+                    >
+                        <div class="product-icon">&#x1F34C;</div>
+                        <h3>Gemini Nano-Banana</h3>
+                        <p>
+                            Go-to for image generation and editing. The
+                            quality/control tradeoff is the best we've used.
+                        </p>
+                        <div class="product-meta">
+                            <span>Google</span><span>2026</span>
+                        </div>
+                    </a>
+                    <a
+                        href="https://notebooklm.google/"
+                        class="product-card"
+                        target="_blank"
+                    >
+                        <div class="product-icon">&#x1F4D3;</div>
+                        <h3>Google NotebookLM</h3>
+                        <p>
+                            Reading partner for paper clusters and long
+                            sources. The audio overview is genuinely useful for
+                            first-pass orientation.
+                        </p>
+                        <div class="product-meta">
+                            <span>Google</span><span>2026</span>
+                        </div>
+                    </a>
+                    <a
+                        href="https://allenai.org/asta"
+                        class="product-card"
+                        target="_blank"
+                    >
+                        <div class="product-icon">&#x1F4DA;</div>
+                        <h3>Asta</h3>
+                        <p>
+                            Allen AI's literature-discovery agent over Semantic
+                            Scholar. The closest thing to a real research
+                            assistant for the arxiv firehose.
+                        </p>
+                        <div class="product-meta">
+                            <span>Ai2</span><span>2026</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- LATEST FROM BLOG -->
         <section>
             <div class="container">
@@ -340,8 +517,8 @@
                         <span class="article-meta">X &middot; Nov 2025</span>
                     </li>
                 </ul>
-                <a href="tech.html" class="btn" style="margin-top: 1rem"
-                    >All Technical Content &rarr;</a
+                <a href="blog/" class="btn" style="margin-top: 1rem"
+                    >All Blog Content &rarr;</a
                 >
             </div>
         </section>

@@ -232,6 +232,14 @@ section { padding: 4rem 0; }
   color: inherit;
 }
 .product-card:hover::before { opacity: 1; }
+/* Linked product card gets an external arrow affordance */
+a.product-card::after {
+  content: '\2197';
+  position: absolute; top: 1rem; right: 1rem;
+  color: var(--text-faint); font-size: 0.95rem;
+  transition: color 0.25s;
+}
+a.product-card:hover::after { color: var(--accent); }
 
 /* Static info cards: dashed border, transparent fill, no hover motion */
 .product-card--static {

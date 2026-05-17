@@ -77,20 +77,18 @@ function renderList(posts, activeTag) {
         return;
     }
     const ul = document.createElement("ul");
-    ul.className = "article-list";
+    ul.className = "blog-list";
     for (const p of filtered) {
         const li = document.createElement("li");
-        li.className = "article-item";
         const tagBits = (p.tags || []).slice(0, 4).map((t) => `<a class="post-tag" href="${BLOG_BASE}?tag=${encodeURIComponent(String(t).toLowerCase())}">#${escapeHtml(t)}</a>`).join(" ");
         li.innerHTML = `
-            <div>
-                <div class="article-title">
-                    <a href="${BLOG_BASE}${encodeURIComponent(p.slug)}/">${escapeHtml(p.title)}</a>
-                </div>
-                ${p.excerpt ? `<div class="article-desc">${escapeHtml(p.excerpt)}</div>` : ""}
-                ${tagBits ? `<div class="post-tag-row">${tagBits}</div>` : ""}
-            </div>
-            <span class="article-meta">${fmtDate(p.date)}</span>
+            <span class="blog-date">${fmtDate(p.date)}</span>
+            <span class="blog-title">
+                <a href="${BLOG_BASE}${encodeURIComponent(p.slug)}/">${escapeHtml(p.title)}</a>
+                ${p.excerpt ? `<br><span style="color:var(--text-dim, #888); font-weight:normal; font-size:0.9em;">${escapeHtml(p.excerpt)}</span>` : ""}
+                ${tagBits ? `<br><span class="post-tag-row">${tagBits}</span>` : ""}
+            </span>
+            <span class="blog-read"></span>
         `;
         ul.appendChild(li);
     }
@@ -137,6 +135,8 @@ function preprocessWikilinks(md, basePath) {
     return md;
 }
 
+// Replace Obsidian-style inline #hashtags with markdown links, leaving
+// headings and fenced/inline code untouched.
 function preprocessHashtags(md) {
     const out = [];
     let inFence = false;

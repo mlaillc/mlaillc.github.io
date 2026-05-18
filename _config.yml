@@ -1,0 +1,35 @@
+title: MLAI LLC
+description: "Personalized, local-first, privacy-focused AI experiences for individual end users. Maker of Maibook, Claude Code CLI Viewer, Haixu and ahai."
+url: "https://mlaillc.com"
+author: MLAI LLC
+
+permalink: /blog/:slug/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - scripts
+  - vendor
+  - .DS_Store
+  - node_modules
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
